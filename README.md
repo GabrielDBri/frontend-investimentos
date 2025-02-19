@@ -39,7 +39,7 @@ npm install
 ```
 ## 3. Verifique a URL do backend:
 Confirme se a URL do backend esta na porta localhost:8080
-O frontend esta configurado esta configurado para rodar com essa URL
+O frontend esta configurado para rodar com essa URL
 💡 Dica: Altere a URL caso o backend esteja rodando em outro endereço.
 
 4. Rode o Projeto em Ambiente de Desenvolvimento:
