@@ -1,5 +1,5 @@
 import { useState } from "react";
-import InvestmentForm from "./InvestmentForm";
+import InvestmentForm from "./investment-form";
 import axios from "axios";
 
 interface InvestmentModalProps {
@@ -32,8 +32,8 @@ export default function InvestmentModal({ isOpen, onClose, onSuccess }: Investme
       });
 
       setFormData({ nome: "", tipoInvestimento: "", valorInvestido: "", dataInvestimento: "" });
-      onSuccess(); // Atualiza a lista
-      onClose(); // Fecha o modal
+      onSuccess(); 
+      onClose(); 
     } catch (error) {
       console.error("Erro ao cadastrar investimento:", error);
     }

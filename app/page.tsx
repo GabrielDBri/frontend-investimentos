@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import axios from "axios";
-import InvestmentChart from "@/app/components/InvestmentChart";
+import InvestmentChart from "@/app/investments/components/ui/investment-chart";
 
 interface Investment {
   id: number;
@@ -13,8 +13,6 @@ interface Investment {
 
 export default function Home() {
   const [investments, setInvestments] = useState<Investment[]>([]);
-
-  // ✅ Busca os investimentos na API
   const fetchInvestments = async () => {
     try {
       const response = await axios.get("http://localhost:8080/investimentos");
@@ -36,10 +34,8 @@ export default function Home() {
       </header>
 
       <main className="w-full max-w-5xl flex flex-col items-center gap-8">
-        {/* ✅ Gráfico centralizado */}
         <InvestmentChart investments={investments} />
       </main>
-
     </div>
   );
 }

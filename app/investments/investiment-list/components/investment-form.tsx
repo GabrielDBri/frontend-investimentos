@@ -9,7 +9,7 @@ interface InvestmentFormProps {
   };
   handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
   handleSubmit: (e: React.FormEvent) => void;
-  isEdit?: boolean; // Se for edição, muda o título do formulário e o botão
+  isEdit?: boolean;
 }
 
 export default function InvestmentForm({ formData, handleChange, handleSubmit, isEdit = false }: InvestmentFormProps) {
@@ -18,10 +18,10 @@ export default function InvestmentForm({ formData, handleChange, handleSubmit, i
   });
 
   const validateForm = () => {
-    const today = new Date().toISOString().split("T")[0]; // Pega a data de hoje no formato YYYY-MM-DD
+    const today = new Date().toISOString().split("T")[0];
 
     const newErrors = {
-      dataInvestimento: formData.dataInvestimento > today, // Verifica se a data é futura
+      dataInvestimento: formData.dataInvestimento > today,
     };
 
     setErrors(newErrors);
@@ -63,6 +63,9 @@ export default function InvestmentForm({ formData, handleChange, handleSubmit, i
           <option value="ACAO">Ação</option>
           <option value="FUNDO">Fundo</option>
           <option value="TITULO">Título</option>
+          <option value="CDB">CDB</option>
+          <option value="LCI">LCI</option>
+          <option value="LCA">LCA</option>
         </select>
       </div>
 

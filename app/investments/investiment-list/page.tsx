@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 import axios from "axios";
-import InvestmentTable from "@/app/components/InvestmentTable";
-import InvestmentModal from "@/app/components/InvestimentoCadastro";
-import Toast from "@/app/components/Toast";
+import InvestmentTable from "@/app/investments/investiment-list/components/investment-table";
+import InvestmentModal from "@/app/investments/investiment-list/components/investimento-cadastro";
+import Toast from "@/app/investments/components/ui/toast";
 
 interface Investment {
   id: number;
@@ -44,7 +44,6 @@ export default function InvestmentList() {
         </button>
       </div>
 
-      {/* ✅ Tabela de investimentos */}
       <div className="bg-gray-100 p-4 rounded-xl shadow-inner overflow-x-auto">
         <InvestmentTable
           investments={investments}
@@ -59,7 +58,6 @@ export default function InvestmentList() {
         />
       </div>
 
-      {/* ✅ Modal de cadastro */}
       <InvestmentModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
@@ -69,7 +67,6 @@ export default function InvestmentList() {
         }}
       />
 
-      {/* ✅ Exibir mensagens de sucesso */}
       {successMessage && <Toast message={successMessage} onClose={() => setSuccessMessage(null)} />}
     </div>
   );

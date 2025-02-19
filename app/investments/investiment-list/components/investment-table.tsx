@@ -1,6 +1,6 @@
 import { useState } from "react";
-import EditInvestmentModal from "./EditInvestmentModal";
-import DeleteInvestmentButton from "./DeleteInvestmentButton";
+import EditInvestmentModal from "./edit-investment-modal";
+import DeleteInvestmentButton from "./delete-investment-button";
 
 interface Investment {
   id: number;

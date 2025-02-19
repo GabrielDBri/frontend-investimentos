@@ -9,7 +9,7 @@ export default function Toast({ message, onClose }: ToastProps) {
   useEffect(() => {
     const timer = setTimeout(() => {
       onClose();
-    }, 3000); // ✅ Mensagem desaparece após 3 segundos
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, [onClose]);
