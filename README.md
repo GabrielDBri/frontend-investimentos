@@ -21,7 +21,6 @@ Este projeto consome a API do **Back-End** e exibe **gráficos e tabelas** com o
 Antes de rodar a aplicação, certifique-se de ter instalado:
 
 - **[Node.js 18+](https://nodejs.org/)**
-- **[Yarn](https://yarnpkg.com/) (opcional, mas recomendado)**
 
 > **⚠️ Importante:** O **servidor da API** precisa estar rodando antes de iniciar o front-end.
 
@@ -29,8 +28,25 @@ Antes de rodar a aplicação, certifique-se de ter instalado:
 
 ## 🛠️ Como Rodar o Projeto
 
-### 🔹 1. Clone o Repositório:
+### 1. Clone o Repositório:
 ```sh
-git clone https://github.com/GabrielDBri/investimentos-frontend.git
+git clone https://github.com/GabrielDBri/frontend-investimentos.git
 cd investimentos-frontend
+```
+### 2. Instale as Dependências:
+```sh
+npm install
+```
+## 3. Verifique a URL do backend:
+Confirme se a URL do backend esta na porta localhost:8080
+O frontend esta configurado esta configurado para rodar com essa URL
+💡 Dica: Altere a URL caso o backend esteja rodando em outro endereço.
+
+4. Rode o Projeto em Ambiente de Desenvolvimento:
+```sh
+npm run dev
+```
+
+## Acesse a aplicação no navegador:
+👉 http://localhost:3000
 
