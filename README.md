@@ -42,7 +42,7 @@ Confirme se a URL do backend esta na porta localhost:8080
 O frontend esta configurado para rodar com essa URL
 💡 Dica: Altere a URL caso o backend esteja rodando em outro endereço.
 
-4. Rode o Projeto em Ambiente de Desenvolvimento:
+## 4. Rode o Projeto em Ambiente de Desenvolvimento:
 ```sh
 npm run dev
 ```
